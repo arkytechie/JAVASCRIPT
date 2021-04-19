@@ -172,7 +172,7 @@ if (markBMI > johnBMI) {
 else {
     console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI}) !`);
 }
-*/
+
 
 // type conversion
 const inputYear = '1984';
@@ -185,3 +185,171 @@ console.log(typeof NaN);
 console.log(String(23), 23);
 
 // type coersion
+console.log('I am ' + 23 + ' years old');
+console.log('23' - '10' - 3);
+console.log('23' + '10' + 3);
+console.log('23' * '10');
+console.log('23' / '10');
+console.log('23' > '10');
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n);
+
+
+// 5 FALSY VALUES - 0, '', undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Arkesh'));
+console.log(Boolean({}));
+
+const money = 1000;
+if (money) {
+    console.log("Don't spend it all ;) ");
+} else {
+    console.log('You need to get a job! ');
+}
+
+
+const age = '18';
+//strict comparison operator (===)
+if (age === 18) console.log("You just became an adult :) (strict)");
+//loose comparison operator (==) TRY TO AVOID IT FOR UNNECESSARY BUGS
+if (age == 18) console.log("You just became an adult :) (loosely) ");
+
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+    console.log(`Cool! ${favourite} is an amazing number!`);
+} else if (favourite === 7) {
+    console.log(`Cool! ${favourite} is an amazing number!`);
+} else if (favourite === 9) {
+    console.log(`Cool! ${favourite} is an amazing number!`);
+} else {
+    console.log(`The number is neither 23 or 7 or 9`);
+}
+
+if (favourite !== 23) console.log("Why not 23?");
+*/
+/*
+//Boolean Operator
+const hasDriversLicense = true; //variable A
+const hasGoodVision = false; //variable B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+*/
+/*
+const shoulDrive = hasDriversLicense && hasGoodVision;
+if (shoulDrive) {
+    console.log("Sarah should be able to drive!");
+} else {
+    console.log("someone else should drive...");
+}
+
+
+const isTired = true; // variable C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah should be able to drive!");
+} else {
+    console.log("someone else should drive...");
+}
+
+
+// Coding Challenge # 3 (Fundamanetals)
+const firstScoreDolphins = Number(prompt("Enter First Score for Dolphins"));
+const secondScoreDolphins = Number(prompt("Enter Second Score for Dolphins"));
+const thirdScoreDolphins = Number(prompt("Enter Third Score for Dolphins"));
+
+const firstScoreKoalas = Number(prompt("Enter First Score for Koalas"));
+const secondScoreKoalas = Number(prompt("Enter Second Score for Koalas"));
+const thirdScoreKoalas = Number(prompt("Enter Third Score for Koalas"));
+
+const averageScoreDolphins = (firstScoreDolphins + secondScoreDolphins + thirdScoreDolphins) / 3;
+const averageScoreKoalas = (firstScoreKoalas + secondScoreKoalas + thirdScoreKoalas) / 3;
+console.log(averageScoreDolphins, averageScoreKoalas);
+
+const minScore = 100;
+
+if ((averageScoreDolphins === averageScoreKoalas) && (averageScoreKoalas >= minScore) && (averageScoreKoalas >= minScore)) {
+    console.log("Both Teams have same score and their average score are over 100 so its a draw :( ");
+} else if ((averageScoreDolphins > averageScoreKoalas) && (averageScoreDolphins >= minScore)) {
+    console.log("Dolphins have higher score and their score is greater than 100 so Dolphins win!");
+} else if ((averageScoreDolphins < averageScoreKoalas) && (averageScoreKoalas >= minScore)) {
+    console.log("Koalas have higher score and their average score is greater than 100 so Koalas win!!");
+} else {
+    console.log("No conditions were met so no Team wins the trophy!");
+}
+
+//SWITCH Statement
+const day = 'Monday';
+
+switch (day) {
+    case 'Monday': //day === 'Monday'
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'Tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'Wednesday':
+    case 'Thursday':
+        console.log('Write code examples');
+        break;
+    case 'Friday':
+        console.log('Record Videos');
+        break;
+    case 'Saturday':
+    case 'Sunday':
+        console.log('Enjoy your weekend!');
+        break;
+    default:
+        console.log('Not a valid day!');
+}
+
+
+//SWITCH statement in IF-ELSE
+const day = 'Monday';
+if (day === 'Monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'Tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'Wednesday' || day === 'Thursday') {
+    console.log('Prepare theory videos');
+} else if (day === 'Friday') {
+    console.log('Record Videos');
+} else if (day === 'Saturday' || day === 'Sunday') {
+    console.log('Enjoy your weekend!');
+} else {
+    console.log('Not a valid day!');
+}
+
+
+//TERNARY Operator
+const age = 23;
+//age >= 18 ? console.log("I like to drink wine") : console.log("I like to drink water!");
+
+const drink = age >= 18 ? 'Wine 🍷' : 'Water 🥛';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = 'Wine 🍷';
+} else {
+    drink2 = 'Water 🥛';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'Wine 🍷' : 'Water 🥛'}`);
+*/
+const bill = 430;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+console.log(`tip amount = ${tip}`);
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`);

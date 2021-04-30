@@ -254,9 +254,9 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(total);
 
 
-// Defining an Object. 
-//This is known as OBJECT LITERAL SYNTAX. 
-//Order of the entries does not matter here. So, this can be used for un-ordered data. And array can be used for ordered data. 
+// Defining an Object.
+//This is known as OBJECT LITERAL SYNTAX.
+//Order of the entries does not matter here. So, this can be used for un-ordered data. And array can be used for ordered data.
 const arkesh = {
     firstName: 'Arkesh',
     lastName: 'Sharma',
@@ -271,7 +271,7 @@ console.log(arkesh['lastName']);
 
 const nameKey = 'Name';
 console.log(arkesh['first' + nameKey]);
-console.log(arkesh['last' + nameKey]); // square brackets can take any expression inside but the dot operator cannot. 
+console.log(arkesh['last' + nameKey]); // square brackets can take any expression inside but the dot operator cannot.
 
 //this will not work
 // console.log(arkesh.'last' + nameKey);
@@ -295,12 +295,12 @@ arkesh['Instagram'] = 'arkesh_sharma';
 
 console.log(arkesh);
 
-//Mini Challenge 
-//print - arkesh (dynamically) has 3 (count dynamically) friends and Jakob (first friend is the list) is his best friend. 
+//Mini Challenge
+//print - arkesh (dynamically) has 3 (count dynamically) friends and Jakob (first friend is the list) is his best friend.
 //console.log(arkesh.friends.length);
 //console.log(arkesh.friends[0]);
 console.log(`${arkesh.firstName} has ${arkesh.friends.length} friends and ${arkesh.friends[0]} is his best friend`);
-*/
+
 
 const arkesh = {
     firstName: 'Arkesh',
@@ -328,8 +328,6 @@ const arkesh = {
         this.summary = `${this.firstName} is a ${this.calcAge()}-year old ${this.job} and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
         return this.summary;
     }
-
-
 };
 
 //console.log(arkesh.calcAge(1984));
@@ -340,24 +338,161 @@ console.log(arkesh.age);
 
 // Mini Challenge to summarize the data for Arkesh
 //returns string
-// Arkesh is a 60-year old Programmer and he has a/no driver's license" 
+// Arkesh is a 60-year old Programmer and he has a/no driver's license"
 console.log(arkesh.getSummary());
 
 
+//CODING CHALLENGE #3 (Fundamentals-2)
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+
+console.log(john.calcBMI() > mark.calcBMI() ? `${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s BMI ${mark.calcBMI()}.` : `${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s BMI ${john.calcBMI()}.`);
 
 
+//FOR LOOP
+//keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+}
 
 
+const arkesh = [
+    'Arkesh',
+    'Sharma',
+    2050 - 1984,
+    ['Jakob', 'Tobias', 'Quinn'],
+    'Programmer'
+];
+const types = [];
+
+for (let i = 0; i < arkesh.length; i++) {
+    console.log(arkesh[i]);
+
+    //types[i] = typeof arkesh[i];
+    types.push(typeof arkesh[i]);
+
+}
+console.log(types);
+
+const years = [1984, 1956, 2001, 2014];
+const ages = [];
+
+for (let j = 0; j < years.length; j++) {
+    ages.push(2050 - years[j]);
+}
+console.log(ages);
+
+// CONTINUE and BREAK statements
+// For CONTINUE if the statement is true then it will skip the current entry and move on.
+console.log('---ONLY STRINGS---')
+for (let i = 0; i < arkesh.length; i++) {
+    if (typeof arkesh[i] !== 'string') continue;
+
+    console.log(arkesh[i], typeof arkesh[i]);
+}
+//For BREAK statement as soon as the number is encountered, the control will exit the loop and nothing will be printed after that.
+console.log('---BREAK WITH NUMBER---')
+for (let i = 0; i < arkesh.length; i++) {
+    if (typeof arkesh[i] === 'number') break;
+
+    console.log(arkesh[i], typeof arkesh[i]);
+}
 
 
+//Looping Backwards
+
+const arkesh = [
+    'Arkesh',
+    'Sharma',
+    2050 - 1984,
+    ['Jakob', 'Tobias', 'Quinn'],
+    'Programmer'
+];
+
+for (let i = arkesh.length - 1; i >= 0; i--) {
+    console.log(i, arkesh[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`---------- Starting Exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting Weight repetition ${rep} 🏋️‍♀️`);
+    }
+}
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting Weight repetition ${rep} 🏋️‍♀️`);
+}
 
 
+// WHILE LOOP... Useful when the number of iterations are not known before-hand
+
+// Sample WHILE Loop with prefixed numbers of times the loop will work
+let rep = 1;
+while (rep <= 10) {
+    console.log(`WHILE LOOP: Lifting Weight repetition ${rep} 🏋️‍♀️`);
+    rep++;
+}
 
 
+let dice = Math.trunc(Math.random() * 6) + 1;
+//console.log(dice);
 
+while (dice !== 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('loop is about to end... ')
+}
+*/
 
+//CODING CHALLENGE #4 (Fundamentals-2)
 
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
 
+const calcTip = (billAmount) => {
 
+    return billAmount >= 50 && billAmount <= 300 ? billAmount * 0.15 : billAmount * 0.20;
+}
 
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+}
+console.log(`Tips = ${tips}`);
+console.log(`Total = ${totals}`);
 
+const calcAverage = (arr) => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(`The Average of Totals is = ${calcAverage(totals)}`);
+
+Tips = 4.4, 44.25, 26.4, 88, 7.4, 15.75, 2, 220, 12.9, 7.8
+Total = 26.4, 339.25, 202.4, 528, 44.4, 120.75, 12, 1320, 98.9, 59.8
+The Average of Totals is = 275.19

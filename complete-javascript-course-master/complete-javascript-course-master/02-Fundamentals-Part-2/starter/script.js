@@ -1,5 +1,5 @@
 //STRICT mode in JavaScript
-'use strict';
+"use strict";
 /*
 let hasDriversLicense = false;
 const passTest = true;
@@ -473,26 +473,23 @@ let tips = [];
 let totals = [];
 
 const calcTip = (billAmount) => {
-
-    return billAmount >= 50 && billAmount <= 300 ? billAmount * 0.15 : billAmount * 0.20;
-}
+  return billAmount >= 50 && billAmount <= 300
+    ? billAmount * 0.15
+    : billAmount * 0.2;
+};
 
 for (let i = 0; i < bills.length; i++) {
-    tips.push(calcTip(bills[i]));
-    totals.push(bills[i] + tips[i]);
+  tips.push(calcTip(bills[i]));
+  totals.push(bills[i] + tips[i]);
 }
 console.log(`Tips = ${tips}`);
 console.log(`Total = ${totals}`);
 
 const calcAverage = (arr) => {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-    return sum / arr.length;
-}
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
 console.log(`The Average of Totals is = ${calcAverage(totals)}`);
-
-Tips = 4.4, 44.25, 26.4, 88, 7.4, 15.75, 2, 220, 12.9, 7.8
-Total = 26.4, 339.25, 202.4, 528, 44.4, 120.75, 12, 1320, 98.9, 59.8
-The Average of Totals is = 275.19

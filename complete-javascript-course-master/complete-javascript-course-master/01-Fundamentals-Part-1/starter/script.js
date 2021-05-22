@@ -349,6 +349,7 @@ console.log(drink2);
 
 console.log(`I like to drink ${age >= 18 ? 'Wine 🍷' : 'Water 🥛'}`);
 */
+//CODING CHALLENGE #4 (Fundamentals-1)
 const bill = 430;
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 console.log(`tip amount = ${tip}`);

@@ -1,7 +1,6 @@
 // Remember, we're gonna use strict mode in all scripts now!
 'use strict';
 
-<<<<<<< HEAD
 /*
 const x = '23';
 if (x === 23) console.log(23);
@@ -88,5 +87,3 @@ const data1 = [17, 21, 23];
 const data2 = [12, 5, -5, 0, 4];
 printForecast(data1);
 printForecast(data2);
-=======
->>>>>>> 252f83a66ce604d6bdd44aab25bedb71384e7a4b
